@@ -31,6 +31,6 @@ jobs:
       - name: Pull Image from docker hub
         run:  docker pull udaykiranreddy146/springboot-helloworld:latest
       - name: Delete old container
-        run:
+        run:  docker rm -f springboot-helloworld-container
       - name:  Run docker container
         run: docker run -d -p 8080:8080 --name springboot-helloworld-container udaykiranreddy146/springboot-helloworld
